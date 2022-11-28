@@ -1,0 +1,76 @@
+:root {
+    --clr-white-100: #fff;
+    --clr-white-200: #e2e2e2;
+
+    --clr-blue-800: #003049;
+    --clr-blue-900: #000814;
+
+    --clr-red: #C1121F;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--clr-white-100);
+    display: grid;
+    place-items: center;
+    font-family: Roboto, Arial;
+}
+
+.counter-container {
+    position: relative;
+    width: 80vmin;
+    background-color: var(--clr-blue-800);
+    padding: 100px 40px;
+    border-radius: 9px;
+    box-shadow: 2px 2px 30px rgba(0, 8, 20, 0.5)
+}
+
+
+h1 {
+    text-align: center;
+    color: var(--clr-white-100);
+    font-size: 60px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.btns button {
+    font-weight: bold;
+    width: 130px;
+    border: none;
+    padding: 15px 0px;
+    font-size: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button.inc,
+button.dec {
+    color: var(--clr-blue-900);
+    background-color: var(--clr-white-200);
+}
+
+button.reset {
+    background-color: transparent;
+    border: 4px solid var(--clr-white-200);
+    color: var(--clr-white-200);
+}
+
+.dec:active,
+.inc:active {
+    border: 2px solid var(--clr-blue-800);
+}
+
+.reset:active {
+    border: 4px solid var(--clr-red);
+}
