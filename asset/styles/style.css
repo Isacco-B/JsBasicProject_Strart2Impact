@@ -15,19 +15,18 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-color: var(--clr-white-100);
-    display: grid;
-    place-items: center;
     font-family: Roboto, Arial;
 }
 
 .counter-container {
-    position: relative;
-    width: 80vmin;
     background-color: var(--clr-blue-800);
-    padding: 100px 40px;
-    border-radius: 9px;
+    padding: 100px 20px;
+    border-radius: 30px;
     box-shadow: 2px 2px 30px rgba(0, 8, 20, 0.5)
 }
 
@@ -41,12 +40,13 @@ h1 {
 .btns {
     display: flex;
     justify-content: space-around;
+    gap: 15px;
     margin-top: 60px;
 }
 
 .btns button {
+    min-width: 80px;
     font-weight: bold;
-    width: 130px;
     border: none;
     padding: 15px 0px;
     font-size: 25px;
@@ -68,9 +68,11 @@ button.reset {
 
 .dec:active,
 .inc:active {
-    border: 2px solid var(--clr-blue-800);
+    transform: scale(.98);
+    
 }
 
 .reset:active {
-    border: 4px solid var(--clr-red);
+    transform: scale(.98);
+    border-color:  var(--clr-red);
 }
