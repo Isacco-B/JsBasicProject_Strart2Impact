@@ -2,50 +2,42 @@
 function counterBuilder(tag, clas, text) {
     element = document.createElement(tag);
     element.setAttribute('class', clas);
-    element.textContent = text 
+    element.textContent = text
     return element;
-  }
-
-
+}
+//Create counter element and add to Body
 const counterContainer = counterBuilder('div', 'counter-container', '')
 document.body.appendChild(counterContainer);
 
-const title = counterBuilder('h1', 'num', '0');
-counterContainer.appendChild(title);
+const counterValue = counterBuilder('h1', 'num', '0');
+counterContainer.appendChild(counterValue);
 
-const btnContainer = counterBuilder('div', 'btns', '');
-counterContainer.appendChild(btnContainer);
+const buttonContainer = counterBuilder('div', 'btn', '');
+counterContainer.appendChild(buttonContainer);
 
-const btndecrease = counterBuilder('button', 'dec', '-')
-btnContainer.appendChild(btndecrease);
+const buttonPlus = counterBuilder('button', 'decrease', '-')
+buttonContainer.appendChild(buttonPlus);
 
-const btnreset = counterBuilder('button', 'reset', 'Reset')
-btnContainer.appendChild(btnreset);
+const buttonReset = counterBuilder('button', 'reset', 'Reset')
+buttonContainer.appendChild(buttonReset);
 
-const btnincrease = counterBuilder('button', 'inc', '+')
-btnContainer.appendChild(btnincrease);
+const buttonMinus = counterBuilder('button', 'increase', '+')
+buttonContainer.appendChild(buttonMinus);
 
 
-// function for decrease, increase & reser the counter app.
-let counter = 0;
-let num = document.querySelector('.num');
+let currentValue = 0; //initialize count
+let counterDisplay = document.querySelector('.num');
 
-btndecrease.onclick = decreases;
-btnincrease.onclick = increases; 
-btnreset.onclick = reset; 
-
-function decreases() {
-    counter -- 
-    num.innerText = counter
-}
-
-function increases() {
-    counter ++
-    num.innerText = counter
-
-}
-
-function reset() {
-    counter = 0
-    num.innerText = counter
-}
+//Add event listener on buttoncontainer and decrease,increase or reset the counter.
+buttonContainer.addEventListener("click", function(e){
+    if (e.target.className == 'decrease'){
+        currentValue --
+        counterDisplay.innerText = currentValue
+    } else if (e.target.className == 'increase'){
+        currentValue ++
+        counterDisplay.innerText = currentValue
+    } else if (e.target.className == 'reset') {
+        currentValue = 0
+        counterDisplay.innerText = currentValue
+    }
+})

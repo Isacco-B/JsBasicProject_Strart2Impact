@@ -37,14 +37,14 @@ h1 {
     font-size: 60px;
 }
 
-.btns {
+.btn {
     display: flex;
     justify-content: space-around;
     gap: 15px;
     margin-top: 60px;
 }
 
-.btns button {
+.btn button {
     min-width: 80px;
     font-weight: bold;
     border: none;
@@ -54,8 +54,8 @@ h1 {
     cursor: pointer;
 }
 
-button.inc,
-button.dec {
+button.increase,
+button.decrease {
     color: var(--clr-blue-900);
     background-color: var(--clr-white-200);
 }
@@ -66,10 +66,10 @@ button.reset {
     color: var(--clr-white-200);
 }
 
-.dec:active,
-.inc:active {
+.decrease:active,
+.increase:active {
     transform: scale(.98);
-    
+
 }
 
 .reset:active {
