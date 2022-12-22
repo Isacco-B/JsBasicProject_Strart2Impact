@@ -12,7 +12,7 @@ It's a simple counter made using basic javascript.
 
 ## Demo
 
-Link demo : https://isacco-b.github.io/Counter/
+Link demo : https://isacco-b.github.io/JsBasicProject_Strart2Impact/
 
 
 ## Languages
