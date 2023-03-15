@@ -2,7 +2,10 @@
 
 Simple counter made for Start2Impact University.
 
-![App Screenshot](https://cloud.isaccobertoli.com/s/SD26ZgBmPeWCPbD/download/Counter.png)
+
+<p align="center">
+    <img width="80%" src="./asset/img/Counter.png">
+</p>
 
 
 ## Info
